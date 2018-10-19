@@ -3,11 +3,12 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="downloader" class="ru.innopolis.stc12.ioctest.FileDownloader" />
-    <bean id="uploader" class="ru.innopolis.stc12.ioctest.FileUploader" />
+    <bean id="downloader2" class="ru.innopolis.stc12.ioctest.FileDownloader"/>
+    <bean id="downloader3" class="ru.innopolis.stc12.ioctest.DBDownloader" primary="true"/>
+    <bean id="uploader2" class="ru.innopolis.stc12.ioctest.FileUploader"/>
 
-    <bean id="dataHandler" class="ru.innopolis.stc12.ioctest.DataHandler">
-        <constructor-arg name="downloader" ref="downloader" />
-        <constructor-arg name="uploader" ref="uploader" />
+    <bean id="dataHandler" class="ru.innopolis.stc12.ioctest.DataHandler" autowire="byType">
+        <!--        <property name="downloader" ref="downloader" />
+                <property name="uploader" ref="uploader" />-->
     </bean>
 </beans>
