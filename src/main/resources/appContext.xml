@@ -1,3 +1,4 @@
+<!--
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -8,7 +9,7 @@
     <bean id="uploader2" class="ru.innopolis.stc12.ioctest.FileUploader"/>
 
     <bean id="dataHandler" class="ru.innopolis.stc12.ioctest.DataHandler" autowire="byType">
-        <!--        <property name="downloader" ref="downloader" />
-                <property name="uploader" ref="uploader" />-->
+        &lt;!&ndash;        <property name="downloader" ref="downloader" />
+                <property name="uploader" ref="uploader" />&ndash;&gt;
     </bean>
-</beans>
+</beans>-->
